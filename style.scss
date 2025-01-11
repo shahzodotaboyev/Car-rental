@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Montserrat;
+}
+:root {
+  --bg-color: #1c1c1c;
+  --bg-color2: #299764;
+}
+.conteiner {
+  width: 100%;
+  height: auto;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  header {
+    max-width: 1440px;
+    width: 100%;
+    height: 94px;
+    padding: 30px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .logo {
+        img {
+          width: 150px;
+          height: 40px;
+        }
+      }
+      .links {
+        max-width: 446px;
+        display: flex;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        justify-content: space-between;
+        color: #fff;
+        gap: 36px;
+        select {
+          background: none;
+          border: 0px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #fff;
+          option {
+            background: var(--bg-color);
+          }
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      align-items: center;
+      gap: 16px;
+      .users {
+        font-weight: 600;
+      }
+      .darkMode {
+        width: 58px;
+        height: 58px;
+        background: #272727;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          color: #fff;
+          font-size: 25px;
+        }
+      }
+      button {
+        width: 142px;
+        height: 58px;
+        border-radius: 50px;
+        border: none;
+        background: var(--bg-color2);
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+      }
+    }
+
+    .bx-menu {
+      font-size: 40px;
+      color: wheat;
+      display: none;
+    }
+  }
+}
+
+@import "./responsive";
