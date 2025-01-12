@@ -24,6 +24,7 @@
   header {
     position: sticky;
     top: 0;
+    padding: 20px;
     background: var(--bg-color);
     max-width: 1200px;
     width: 100%;
@@ -126,6 +127,7 @@
     height: auto;
 
     .section1 {
+      padding: 20px;
       .slideshow-container {
         max-width: 1200px;
         position: relative;
@@ -205,6 +207,7 @@
       }
 
       .dots {
+        max-width: 300px;
         position: relative;
         left: 0;
         top: -60px;

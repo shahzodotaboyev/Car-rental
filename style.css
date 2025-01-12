@@ -23,6 +23,7 @@
 .conteiner header {
   position: sticky;
   top: 0;
+  padding: 20px;
   background: var(--bg-color);
   max-width: 1200px;
   width: 100%;
@@ -111,6 +112,9 @@
   width: 100%;
   height: auto;
 }
+.conteiner main .section1 {
+  padding: 20px;
+}
 .conteiner main .section1 .slideshow-container {
   max-width: 1200px;
   position: relative;
@@ -189,6 +193,7 @@
   margin-top: 10px;
 }
 .conteiner main .section1 .dots {
+  max-width: 300px;
   position: relative;
   left: 0;
   top: -60px;
@@ -220,21 +225,6 @@
   }
 }
 
-@media (max-width: 1233px) {
-  .conteiner {
-    margin: 0;
-    padding: 0;
-  }
-  .conteiner header {
-    padding: 30px 25px;
-  }
-  .conteiner main {
-    padding: 0px 10px;
-  }
-  .conteiner main .section1 .slideshow-container .mySlides .text {
-    top: 0px;
-  }
-}
 @media (max-width: 1024px) {
   .conteiner header .header-left .links {
     display: none;
