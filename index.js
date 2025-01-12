@@ -131,7 +131,6 @@ let darkMode = () => {
   }
 };
 
-
 let menu = () => {
   let menuright = document.querySelector(".hamburgerMenu");
   menuright.classList.add("right0");
@@ -140,3 +139,53 @@ let closeMenu = () => {
   let menuright = document.querySelector(".hamburgerMenu");
   menuright.classList.remove("right0");
 };
+
+const cars = document.querySelectorAll(".cars .car");
+const viewMoreButton = document.getElementById("viewMore");
+const buttons = document.querySelectorAll(".typeCars button");
+
+let currentVisibleCars = 6;
+let activeType = "all";
+
+function showCars() {
+  let visibleCount = 0;
+
+  cars.forEach((car) => {
+    const carType = car.getAttribute("data-type");
+
+    if (activeType === "all" || carType === activeType) {
+      if (visibleCount < currentVisibleCars) {
+        car.style.display = "block";
+        visibleCount++;
+      } else {
+        car.style.display = "none";
+      }
+    } else {
+      car.style.display = "none";
+    }
+  });
+
+  const totalVisibleCars = Array.from(cars).filter(
+    (car) => activeType === "all" || car.getAttribute("data-type") === activeType
+  ).length;
+
+  viewMoreButton.style.display = currentVisibleCars >= totalVisibleCars ? "none" : "block";
+}
+
+showCars();
+
+viewMoreButton.addEventListener("click", () => {
+  currentVisibleCars += 6;
+  showCars();
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    activeType = button.getAttribute("data-type") || "all";
+    currentVisibleCars = 6; 
+    showCars();
+  });
+});
