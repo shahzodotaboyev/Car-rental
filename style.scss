@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,27 +7,31 @@
   list-style: none;
   font-family: Montserrat;
 }
+
 :root {
   --bg-color: #1c1c1c;
   --bg-color2: #299764;
 }
+
 .conteiner {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background: var(--bg-color);
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
   header {
-    max-width: 1440px;
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    max-width: 1200px;
     width: 100%;
     height: 94px;
-    padding: 30px 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .header-left {
       display: flex;
       align-items: center;
@@ -38,6 +43,7 @@
           height: 40px;
         }
       }
+
       .links {
         max-width: 446px;
         display: flex;
@@ -47,27 +53,32 @@
         justify-content: space-between;
         color: #fff;
         gap: 36px;
+
         select {
           background: none;
           border: 0px;
           font-size: 18px;
           font-weight: 500;
           color: #fff;
+
           option {
             background: var(--bg-color);
           }
         }
       }
     }
+
     .header-right {
       display: flex;
       justify-content: space-between;
       color: #fff;
       align-items: center;
       gap: 16px;
+
       .users {
         font-weight: 600;
       }
+
       .darkMode {
         width: 58px;
         height: 58px;
@@ -76,11 +87,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         i {
           color: #fff;
           font-size: 25px;
         }
       }
+
       button {
         width: 142px;
         height: 58px;
@@ -97,6 +110,130 @@
       font-size: 40px;
       color: wheat;
       display: none;
+    }
+  }
+  .hr {
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  main {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+
+    .section1 {
+      .slideshow-container {
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+      }
+
+      .mySlides {
+        display: none;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+
+      .nexrOrPrev {
+        position: absolute;
+        margin-top: -22px;
+        position: absolute;
+        display: flex;
+        gap: 30px;
+        top: 90%;
+        right: 40px;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        .prev,
+        .next {
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+          background: #fff;
+          color: #000;
+          display: flex;
+          align-items: center;
+          border-radius: 50%;
+          justify-content: center;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+          border-radius: 50%;
+        }
+      }
+
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        top: 60px;
+        h1 {
+          font-size: 36px;
+          font-weight: 600;
+        }
+        p {
+          text-align: center;
+          line-height: 19px;
+          margin-top: 10px;
+        }
+      }
+
+      .dots{
+        position: relative;
+        left: 0;
+        top: -80px;
+        left: 30px;
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+  
+          &.active,
+          &:hover {
+            background-color: #717171;
+          }
+        }
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     }
   }
 }
