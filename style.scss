@@ -118,7 +118,13 @@
           font-size: 25px;
         }
       }
-
+      .bg-white {
+        background: #F5F5F5;
+        color: #000;
+        i{
+          color: #000;
+        }
+      }
       button {
         width: 142px;
         height: 58px;

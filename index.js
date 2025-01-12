@@ -75,9 +75,11 @@ let darkMode = () => {
   let select = document.querySelectorAll(".select");
   let options = document.querySelectorAll("option");
   let number = document.querySelector(".users");
+  let darkmode = document.querySelector('.darkMode');
   options.forEach((option) => {
     option.classList.toggle("colorBlack");
   });
+  darkmode.classList.toggle('bg-white')
 
   select.forEach((selectElement) => {
     selectElement.classList.toggle("colorBlack");
@@ -86,7 +88,6 @@ let darkMode = () => {
   links.forEach((link) => {
     link.classList.toggle("colorBlack");
   });
-  
 
   header.classList.toggle("bg-white");
   body.classList.toggle("bgWhite");

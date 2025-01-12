@@ -110,6 +110,13 @@
   color: #fff;
   font-size: 25px;
 }
+.conteiner header .header-right .bg-white {
+  background: #F5F5F5;
+  color: #000;
+}
+.conteiner header .header-right .bg-white i {
+  color: #000;
+}
 .conteiner header .header-right button {
   width: 142px;
   height: 58px;
