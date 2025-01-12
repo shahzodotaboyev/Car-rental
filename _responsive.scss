@@ -74,29 +74,32 @@
   }
 }
 
-@media (max-width:625px) {
-  .conteiner{
-    header{
+@media (max-width: 625px) {
+  .conteiner {
+    header {
       padding: 10px;
-      .header-left{
+      .header-left {
         padding: 0;
-        .logo{
-          img{
+        .logo {
+          img {
             width: 100px;
             height: 30px;
           }
         }
       }
-      .bx-menu{
+      .bx-menu {
         font-size: 34px;
       }
     }
-    main{
+    .hamburgerMenu {
+      width: 100%;
+    }
+    main {
       .section1 {
         .slideshow-container {
-       .nexrOrPrev{
-        margin-top: -35px;
-       }
+          .nexrOrPrev {
+            margin-top: -35px;
+          }
           .mySlides {
             .text {
               h1 {
@@ -112,5 +115,4 @@
       }
     }
   }
-  
 }

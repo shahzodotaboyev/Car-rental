@@ -111,7 +111,7 @@
   font-size: 25px;
 }
 .conteiner header .header-right .bg-white {
-  background: #F5F5F5;
+  background: #f5f5f5;
   color: #000;
 }
 .conteiner header .header-right .bg-white i {
@@ -131,6 +131,105 @@
   font-size: 40px;
   color: wheat;
   display: none;
+}
+.conteiner .hamburgerMenu {
+  position: fixed;
+  width: 80%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 999999999999;
+  right: -100%;
+  top: 0;
+  transition: all ease-in-out 0.6s;
+}
+.conteiner .hamburgerMenu .headerManu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.conteiner .hamburgerMenu .headerManu i {
+  width: 58px;
+  height: 58px;
+  background: #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #bbb;
+}
+.conteiner .hamburgerMenu .links {
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.conteiner .hamburgerMenu .links .colorBlack {
+  color: #000;
+}
+.conteiner .hamburgerMenu .links h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+}
+.conteiner .hamburgerMenu .links ul li {
+  line-height: 29px;
+  color: #555555;
+  font-size: 24px;
+}
+.conteiner .hamburgerMenu .menu-bottom {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.conteiner .hamburgerMenu .menu-bottom h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.conteiner .hamburgerMenu .menu-bottom .colorBlack {
+  color: #000;
+}
+.conteiner .hamburgerMenu .menu-bottom .darkMode {
+  width: 58px;
+  height: 58px;
+  background: #272727;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conteiner .hamburgerMenu .menu-bottom .darkMode i {
+  color: #fff;
+  font-size: 25px;
+}
+.conteiner .hamburgerMenu .menu-bottom button {
+  width: 142px;
+  height: 58px;
+  border-radius: 50px;
+  border: none;
+  background: var(--bg-color2);
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.conteiner .right0 {
+  right: 0%;
+}
+.conteiner .bg-white {
+  background: #fff;
+  color: black;
+}
+.conteiner .colorBlack {
+  color: #000;
 }
 .conteiner .hr {
   width: 100%;
@@ -336,6 +435,9 @@
   }
   .conteiner header .bx-menu {
     font-size: 34px;
+  }
+  .conteiner .hamburgerMenu {
+    width: 100%;
   }
   .conteiner main .section1 .slideshow-container .nexrOrPrev {
     margin-top: -35px;

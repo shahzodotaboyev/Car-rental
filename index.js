@@ -75,28 +75,61 @@ let darkMode = () => {
   let select = document.querySelectorAll(".select");
   let options = document.querySelectorAll("option");
   let number = document.querySelector(".users");
-  let darkmode = document.querySelector('.darkMode');
-  options.forEach((option) => {
-    option.classList.toggle("colorBlack");
-  });
-  darkmode.classList.toggle('bg-white')
-
-  select.forEach((selectElement) => {
-    selectElement.classList.toggle("colorBlack");
-  });
-
-  links.forEach((link) => {
-    link.classList.toggle("colorBlack");
-  });
-
-  header.classList.toggle("bg-white");
-  body.classList.toggle("bgWhite");
-  number.classList.toggle("colorBlack");
-  if (sun.classList.contains("bxs-sun")) {
-    sun.classList.remove("bxs-sun");
-    sun.classList.add("bx-moon");
-  } else {
-    sun.classList.remove("bx-moon");
-    sun.classList.add("bxs-sun");
+  let darkmode = document.querySelector(".darkMode");
+  let hamburgerMenu = document.querySelector(".hamburgerMenu");
+  let h4 = document.querySelector("h4");
+  let h3 = document.querySelector("h3");
+  if (h3) {
+    h3.classList.toggle("colorBlack");
   }
+
+  if (h4) {
+    h4.classList.toggle("colorBlack");
+  }
+  if (options.length > 0) {
+    options.forEach((option) => {
+      option.classList.toggle("colorBlack");
+    });
+  }
+
+  if (darkmode) darkmode.classList.toggle("bg-white");
+
+  if (select.length > 0) {
+    select.forEach((selectElement) => {
+      selectElement.classList.toggle("colorBlack");
+    });
+  }
+
+  if (links.length > 0) {
+    links.forEach((link) => {
+      link.classList.toggle("colorBlack");
+    });
+  }
+
+  if (hamburgerMenu) hamburgerMenu.classList.toggle("bg-white");
+
+  if (header) header.classList.toggle("bg-white");
+
+  if (body) body.classList.toggle("bgWhite");
+
+  if (number) number.classList.toggle("colorBlack");
+
+  if (sun) {
+    if (sun.classList.contains("bxs-sun")) {
+      sun.classList.remove("bxs-sun");
+      sun.classList.add("bx-moon");
+    } else {
+      sun.classList.remove("bx-moon");
+      sun.classList.add("bxs-sun");
+    }
+  }
+};
+
+let menu = () => {
+  let menuright = document.querySelector(".hamburgerMenu");
+  menuright.classList.add("right0");
+};
+let closeMenu = () => {
+  let menuright = document.querySelector(".hamburgerMenu");
+  menuright.classList.remove("right0");
 };
