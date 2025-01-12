@@ -1,6 +1,11 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
+// 3 sekundda avtomatik ravishda slaydlarni aylantirish
+setInterval(() => {
+  plusSlides(1);
+}, 3500);
+
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
@@ -21,10 +26,13 @@ function showSlides(n) {
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    slides[i].style.transition = "opacity 1s"; // Sekin o‘tish effekti qo‘shildi
+    slides[i].style.opacity = 0;
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.opacity = 1;
   dots[slideIndex - 1].className += " active";
 }
