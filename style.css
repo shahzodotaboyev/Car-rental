@@ -12,6 +12,11 @@
   --bg-color2: #299764;
 }
 
+.bgWhite {
+  background: #fff !important;
+  color: #000 !important;
+}
+
 .conteiner {
   width: 100%;
   min-height: 100vh;
@@ -19,6 +24,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.conteiner .bg-white {
+  background: #fff;
+  color: #000;
 }
 .conteiner header {
   position: sticky;
@@ -49,8 +58,8 @@
   font-size: 18px;
   font-weight: 500;
   justify-content: space-between;
-  color: #fff;
   gap: 36px;
+  color: #fff;
 }
 .conteiner header .header-left .links select {
   background: none;
@@ -62,6 +71,18 @@
 .conteiner header .header-left .links select option {
   background: var(--bg-color);
 }
+.conteiner header .header-left .links select .colorBlack {
+  color: #000;
+  background: #fff;
+}
+.conteiner header .header-left .links .colorBlack {
+  color: #000;
+  background: #fff;
+}
+.conteiner header .header-left .colorBlack {
+  color: #000;
+  background: #fff;
+}
 .conteiner header .header-right {
   display: flex;
   justify-content: space-between;
@@ -71,6 +92,10 @@
 }
 .conteiner header .header-right .users {
   font-weight: 600;
+}
+.conteiner header .header-right .colorBlack {
+  color: #000;
+  background: #fff;
 }
 .conteiner header .header-right .darkMode {
   width: 58px;
@@ -103,7 +128,7 @@
 .conteiner .hr {
   width: 100%;
   height: 1px;
-  background: #333333;
+  background: #e5e7ea;
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -242,6 +267,7 @@
   display: flex;
   align-items: center;
   border-radius: 30px;
+  border: 1px solid grey;
 }
 .conteiner main .section1 .search-out .search input {
   width: 90%;

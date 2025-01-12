@@ -20,13 +20,13 @@
 
           <ul class="links">
             <li>Categories</li>
-            <select name="" id="">
+            <select class="select">
               <option value="">About Us</option>
               <option value="">News</option>
               <option value="">Careers</option>
               <option value="">Locations</option>
             </select>
-            <select>
+            <select class="select">
               <option value="">Help Center</option>
               <option value="">FAQ</option>
               <option value="">Contact us</option>
@@ -35,7 +35,7 @@
         </div>
         <div class="header-right">
           <h3 class="users">+1 855 420 0000</h3>
-          <div class="darkMode">
+          <div onclick="darkMode()" class="darkMode">
             <i class="bx bxs-sun"></i>
           </div>
           <div class="logIn">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <i class="bx bx-menu"></i>
-      </header>  
+      </header>
       <span class="hr"></span>
       <main>
         <section class="section1">
@@ -98,12 +98,11 @@
           </div>
           <div class="search-out">
             <div class="search">
-              <input type="text" placeholder="Find the car of your dreams">
-              <i class='bx bx-search-alt-2'></i>
+              <input type="text" placeholder="Find the car of your dreams" />
+              <i class="bx bx-search-alt-2"></i>
             </div>
           </div>
         </section>
-   
       </main>
     </div>
     <script src="./index.js"></script>

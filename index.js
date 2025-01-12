@@ -1,7 +1,6 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
- 
 setInterval(() => {
   plusSlides(1);
 }, 7000);
@@ -9,9 +8,12 @@ setInterval(() => {
 let touchStartX = 0;
 let touchEndX = 0;
 
- 
-document.querySelector(".slideshow-container").addEventListener("touchstart", handleTouchStart, false);
-document.querySelector(".slideshow-container").addEventListener("touchend", handleTouchEnd, false);
+document
+  .querySelector(".slideshow-container")
+  .addEventListener("touchstart", handleTouchStart, false);
+document
+  .querySelector(".slideshow-container")
+  .addEventListener("touchend", handleTouchEnd, false);
 
 function handleTouchStart(e) {
   touchStartX = e.changedTouches[0].screenX;
@@ -24,9 +26,9 @@ function handleTouchEnd(e) {
 
 function handleSwipe() {
   if (touchEndX < touchStartX) {
-    plusSlides(1); // O'ngdan chapga
+    plusSlides(1);
   } else if (touchEndX > touchStartX) {
-    plusSlides(-1); // Chapdan o'ngga
+    plusSlides(-1);
   }
 }
 
@@ -50,7 +52,7 @@ function showSlides(n) {
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    slides[i].style.transition = "opacity 1s"; // Sekin o‘tish effekti qo‘shildi
+    slides[i].style.transition = "opacity 1s";
     slides[i].style.opacity = 0;
   }
   for (i = 0; i < dots.length; i++) {
@@ -60,9 +62,40 @@ function showSlides(n) {
   slides[slideIndex - 1].style.opacity = 1;
   dots[slideIndex - 1].className += " active";
 
-  // Boshqa sahifaga o'tgani bilinsin
   slides[slideIndex - 1].style.transform = "scale(1.05)";
   setTimeout(() => {
     slides[slideIndex - 1].style.transform = "scale(1)";
   }, 1000);
 }
+let darkMode = () => {
+  let sun = document.querySelector(".bxs-sun, .bx-moon");
+  let body = document.querySelector(".conteiner");
+  let header = document.querySelector("header");
+  let links = document.querySelectorAll(".links");
+  let select = document.querySelectorAll(".select");
+  let options = document.querySelectorAll("option");
+  let number = document.querySelector(".users");
+  options.forEach((option) => {
+    option.classList.toggle("colorBlack");
+  });
+
+  select.forEach((selectElement) => {
+    selectElement.classList.toggle("colorBlack");
+  });
+
+  links.forEach((link) => {
+    link.classList.toggle("colorBlack");
+  });
+  
+
+  header.classList.toggle("bg-white");
+  body.classList.toggle("bgWhite");
+  number.classList.toggle("colorBlack");
+  if (sun.classList.contains("bxs-sun")) {
+    sun.classList.remove("bxs-sun");
+    sun.classList.add("bx-moon");
+  } else {
+    sun.classList.remove("bx-moon");
+    sun.classList.add("bxs-sun");
+  }
+};
