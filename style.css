@@ -469,4 +469,12 @@
     font-size: 12px;
     margin-top: 0;
   }
+  .conteiner main .section1 .search-out .search {
+    height: 55px;
+  }
+  .conteiner main .section1 .search-out .search i {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */

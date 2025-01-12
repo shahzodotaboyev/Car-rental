@@ -91,6 +91,7 @@
         font-size: 34px;
       }
     }
+
     .hamburgerMenu {
       padding: 0px;
       width: 100%;
@@ -127,7 +128,18 @@
             }
           }
         }
+        .search-out{
+          .search{
+            height: 55px;
+            i{
+              width: 45px;
+              height: 45px;
+              font-size: 25px;
+            }
+          }
+        }
       }
+       
     }
   }
 }
