@@ -4,7 +4,7 @@ showSlides(slideIndex);
  
 setInterval(() => {
   plusSlides(1);
-}, 5000);
+}, 7000);
 
 let touchStartX = 0;
 let touchEndX = 0;

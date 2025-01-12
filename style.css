@@ -224,6 +224,45 @@
     opacity: 1;
   }
 }
+.conteiner main .section1 .search-out {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
+.conteiner main .section1 .search-out .search {
+  max-width: 600px;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+.conteiner main .section1 .search-out .search input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  font-size: 18px;
+  border-radius: 30px;
+  outline: none;
+}
+.conteiner main .section1 .search-out .search i {
+  width: 58px;
+  height: 58px;
+  background: var(--bg-color2);
+  border-radius: 50%;
+  font-size: 35px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
 
 @media (max-width: 1024px) {
   .conteiner header .header-left .links {
