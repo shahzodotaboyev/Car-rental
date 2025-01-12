@@ -77,15 +77,21 @@ let darkMode = () => {
   let number = document.querySelector(".users");
   let darkmode = document.querySelector(".darkMode");
   let hamburgerMenu = document.querySelector(".hamburgerMenu");
-  let h4 = document.querySelector("h4");
-  let h3 = document.querySelector("h3");
-  if (h3) {
-    h3.classList.toggle("colorBlack");
+  let h4 = document.querySelectorAll(".phoneNum");
+  let h3 = document.querySelectorAll("h3");
+
+  if (h3.length > 0) {
+    h3.forEach((el) => {
+      el.classList.toggle("colorBlack");
+    });
   }
 
-  if (h4) {
-    h4.classList.toggle("colorBlack");
+  if (h4.length > 0) {
+    h4.forEach((el) => {
+      el.classList.toggle("colorBlack");
+    });
   }
+
   if (options.length > 0) {
     options.forEach((option) => {
       option.classList.toggle("colorBlack");
@@ -124,6 +130,7 @@ let darkMode = () => {
     }
   }
 };
+
 
 let menu = () => {
   let menuright = document.querySelector(".hamburgerMenu");
