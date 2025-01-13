@@ -424,6 +424,10 @@
   font-weight: 400;
   line-height: 24px;
 }
+.conteiner main .section2 .colorBlack {
+  color: #000;
+  background: #fff;
+}
 .conteiner main .section2 .typeCars {
   width: 100%;
   display: flex;
@@ -445,6 +449,9 @@
 .conteiner main .section2 .typeCars button.active {
   background-color: var(--bg-color2);
   color: white;
+}
+.conteiner main .section2 .colorBlack button {
+  color: #000;
 }
 .conteiner main .section2 .cars {
   display: grid;
@@ -477,6 +484,12 @@
   color: #fff;
   font-size: 16px;
 }
+.conteiner main .section2 .cars .car .colorBlack h3 {
+  color: #000;
+}
+.conteiner main .section2 .cars .car .colorBlack p {
+  color: #000;
+}
 .conteiner main .section2 .cars .car img {
   width: 360px;
   margin: 16px 0;
@@ -492,6 +505,16 @@
 }
 .conteiner main .section2 .cars .car .infCar p {
   font-size: 16px;
+}
+.conteiner main .section2 .cars .colorBlack {
+  background: #f5f5f5;
+  color: #000;
+}
+.conteiner main .section2 .cars .colorBlack p {
+  color: #000;
+}
+.conteiner main .section2 .cars .bg-white {
+  background: #f5f5f5;
 }
 .conteiner main .section2 .cars .car {
   display: none;
@@ -512,6 +535,10 @@
   font-weight: 500;
   color: #fff;
   cursor: pointer;
+}
+.conteiner main .colorBlack {
+  color: #000;
+  background: #fff;
 }
 
 @media (max-width: 1233px) {

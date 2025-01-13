@@ -79,6 +79,26 @@ let darkMode = () => {
   let hamburgerMenu = document.querySelector(".hamburgerMenu");
   let h4 = document.querySelectorAll(".phoneNum");
   let h3 = document.querySelectorAll("h3");
+  let car = document.querySelectorAll(".car");
+  let modelCar = document.querySelectorAll(".modelCar");
+  let infCars = document.querySelector(".infCars");
+  let typeCars = document.querySelector(".typeCars");
+
+  let infCar = document.querySelectorAll(".infCar");
+  infCar.forEach((p) => {
+    p.classList.toggle("colorBlack");
+  });
+  modelCar.forEach((car) => {
+    car.classList.toggle("colorBlack");
+  });
+
+  typeCars.classList.toggle("colorBlack");
+  infCars.classList.toggle("colorBlack");
+  if (car.length > 0) {
+    car.forEach((car) => {
+      car.classList.toggle("bg-white");
+    });
+  }
 
   if (h3.length > 0) {
     h3.forEach((el) => {
@@ -129,7 +149,19 @@ let darkMode = () => {
       sun.classList.add("bxs-sun");
     }
   }
+
+  const isDarkMode = body.classList.contains("bgWhite");
+  localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
 };
+
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeStatus = localStorage.getItem("darkMode");
+  if (darkModeStatus === "enabled") {
+    darkMode();  
+  }
+});
+
 
 let menu = () => {
   let menuright = document.querySelector(".hamburgerMenu");
@@ -166,10 +198,12 @@ function showCars() {
   });
 
   const totalVisibleCars = Array.from(cars).filter(
-    (car) => activeType === "all" || car.getAttribute("data-type") === activeType
+    (car) =>
+      activeType === "all" || car.getAttribute("data-type") === activeType
   ).length;
 
-  viewMoreButton.style.display = currentVisibleCars >= totalVisibleCars ? "none" : "block";
+  viewMoreButton.style.display =
+    currentVisibleCars >= totalVisibleCars ? "none" : "block";
 }
 
 showCars();
@@ -185,7 +219,7 @@ buttons.forEach((button) => {
     button.classList.add("active");
 
     activeType = button.getAttribute("data-type") || "all";
-    currentVisibleCars = 6; 
+    currentVisibleCars = 6;
     showCars();
   });
 });

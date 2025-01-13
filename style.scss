@@ -447,7 +447,10 @@
           line-height: 24px;
         }
       }
-
+      .colorBlack {
+        color: #000;
+        background: #fff;
+      }
       .typeCars {
         width: 100%;
         display: flex;
@@ -469,6 +472,11 @@
             background-color: var(--bg-color2);
             color: white;
           }
+        }
+      }
+      .colorBlack {
+        button {
+          color: #000;
         }
       }
       .cars {
@@ -500,8 +508,16 @@
               font-size: 16px;
             }
           }
+          .colorBlack {
+            h3{
+              color: #000;
+            }
+            p {
+              color: #000;
+            }
+          }
           img {
-            width: 360px  ;
+            width: 360px;
             margin: 16px 0;
             margin: auto;
           }
@@ -516,6 +532,16 @@
               font-size: 16px;
             }
           }
+        }
+        .colorBlack{
+          background: #f5f5f5;
+          color: #000;
+          p{
+            color: #000;
+          }
+        }
+        .bg-white {
+          background: #f5f5f5;
         }
         .car {
           display: none;
@@ -539,6 +565,10 @@
           cursor: pointer;
         }
       }
+    }
+    .colorBlack {
+      color: #000;
+      background: #fff;
     }
   }
 }
