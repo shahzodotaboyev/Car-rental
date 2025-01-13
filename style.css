@@ -402,7 +402,7 @@
 }
 .conteiner main .section2 {
   max-width: 1200px;
-  margin: 100px 0;
+  margin: 50px 0;
   width: 100%;
 }
 .conteiner main .section2 .infCars {
@@ -430,6 +430,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  margin: 40px 0;
 }
 .conteiner main .section2 .typeCars button {
   padding: 19px 40px;
@@ -450,9 +451,11 @@
   grid-template-columns: repeat(3, 1fr);
   margin: 30px 0;
   row-gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .conteiner main .section2 .cars .car {
-  max-width: 387px;
+  width: 387px;
   height: 433px;
   background: #272727;
   padding: 30px 24px;
@@ -475,7 +478,9 @@
   font-size: 16px;
 }
 .conteiner main .section2 .cars .car img {
+  width: 360px;
   margin: 16px 0;
+  margin: auto;
 }
 .conteiner main .section2 .cars .car .infCar {
   width: 100%;
@@ -509,6 +514,19 @@
   cursor: pointer;
 }
 
+@media (max-width: 1233px) {
+  .conteiner main .section2 {
+    padding: 20px;
+  }
+  .conteiner main .section2 .cars {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+}
 @media (max-width: 1024px) {
   .conteiner header .header-left .links {
     display: none;
@@ -533,6 +551,10 @@
   }
   .conteiner main .section1 .slideshow-container .mySlides .text p {
     font-size: 14px;
+  }
+  .conteiner main .section2 .cars {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 625px) {
@@ -584,5 +606,34 @@
     width: 45px;
     height: 45px;
     font-size: 25px;
+  }
+  .conteiner main .section2 .typeCars button {
+    font-size: 13px;
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+  .conteiner main .section2 .infCars h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .conteiner main .section2 .infCars p {
+    font-size: 12px;
+  }
+  .conteiner main .section2 .cars {
+    padding: 0px;
+  }
+  .conteiner main .section2 .cars .car {
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .conteiner main .section2 .cars .car img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 280px;
+    height: 180px;
   }
 }/*# sourceMappingURL=style.css.map */

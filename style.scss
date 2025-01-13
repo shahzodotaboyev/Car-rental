@@ -426,7 +426,7 @@
     }
     .section2 {
       max-width: 1200px;
-      margin: 100px 0;
+      margin: 50px 0;
       width: 100%;
       .infCars {
         margin: auto;
@@ -454,6 +454,7 @@
         align-items: center;
         justify-content: center;
         gap: 16px;
+        margin: 40px 0;
         button {
           padding: 19px 40px;
           border: 1px solid black;
@@ -475,8 +476,10 @@
         grid-template-columns: repeat(3, 1fr);
         margin: 30px 0;
         row-gap: 20px;
+        align-items: center;
+        justify-content: center;
         .car {
-          max-width: 387px;
+          width: 387px;
           height: 433px;
           background: #272727;
           padding: 30px 24px;
@@ -498,7 +501,9 @@
             }
           }
           img {
+            width: 360px  ;
             margin: 16px 0;
+            margin: auto;
           }
           .infCar {
             width: 100%;
@@ -515,25 +520,23 @@
         .car {
           display: none;
         }
-       
       }
       .viewAll {
         width: 100%;
         align-items: center;
         display: flex;
         justify-content: center;
-       
-        button{
-          
-        background: var(--bg-color2);
-        font-size: 18px;
-        border: none;
-        width: 173px;
-        height: 58px;
-        border-radius: 50px;
-        font-weight: 500;
-        color: #fff;
-        cursor: pointer;
+
+        button {
+          background: var(--bg-color2);
+          font-size: 18px;
+          border: none;
+          width: 173px;
+          height: 58px;
+          border-radius: 50px;
+          font-weight: 500;
+          color: #fff;
+          cursor: pointer;
         }
       }
     }
